@@ -1,0 +1,13 @@
+.vs/
+.git/
+*.cache
+obj/
+README.md
+LICENSE
+bin/
+obj/
+*.exe
+*.pdb
+/Properties
+/bin
+

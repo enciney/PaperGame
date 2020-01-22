@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.960
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaperGame", "PaperGame\PaperGame.csproj", "{296E5489-FC9E-46A8-9FFC-C83A1C4D4C2E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{296E5489-FC9E-46A8-9FFC-C83A1C4D4C2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{296E5489-FC9E-46A8-9FFC-C83A1C4D4C2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{296E5489-FC9E-46A8-9FFC-C83A1C4D4C2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{296E5489-FC9E-46A8-9FFC-C83A1C4D4C2E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3D2BFEAF-93F7-4547-B87C-914F1DFDCF31}
+	EndGlobalSection
+EndGlobal
