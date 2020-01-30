@@ -8,6 +8,5 @@ bin/
 obj/
 *.exe
 *.pdb
-/Properties
-/bin
+Library/
 
