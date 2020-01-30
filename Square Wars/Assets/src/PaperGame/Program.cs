@@ -10,7 +10,7 @@ namespace PaperGame
 	{
 		static void Main(string[] args)
 		{
-			var cell = new Cell(2.2, 5.7);
+			var cell = new Cell(2.2f, 5.7f);
 			cell.AddBuilding(new House());
 			var cellStr = cell.ToString();
 		}

@@ -1,44 +1,49 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using UnityEngine;
+using static UnityEngine.UI.DefaultControls;
+using Resources = UnityEngine.Resources;
 
 namespace PaperGame
 {
-	public class Cell
+	public class Cell : UnityEngine.Object
 	{
 		public enum Corner
 		{
-			LeftUp = 0 ,
-			LeftDown = 1 ,
-			RightUp = 2 ,
-			RightDown = 3 ,
+			LeftUp = 0,
+			LeftDown = 1,
+			RightUp = 2,
+			RightDown = 3,
 		}
 
-		static int CellLength = 10 ;
+		public static  int CellRadius = 1;
 
-		// specify the length of the square 
-		/// <summary>
-		/// specify left up corner location
-		/// </summary>
+		public GameObject cell;
+		// Start is called before the first frame update
+		
 
 		private Dictionary<Corner, Location> cornerLocation;
 		public Dictionary<Corner, Location> CornerLocation { get { return cornerLocation; } }
 		public IBuilding CurrentBuilding { get; private set; }
 
-		public Cell() : this(0.0, 0.0) { }
+		public Cell() : this(0f, 0f) { }
 
-		public Cell(Location loc) : this(loc.X, loc.Y) { }
+		public Cell(Location loc) : this(loc.X, loc.Y) {
 
-		public Cell( double x , double y)
+		}
+
+		public Cell( float x , float y)
 		{
+			
+			//cell.transform.position = new Vector3(x, y);
+			//cell.transform.localScale = new Vector3(2 * CellRadius, 2 * CellRadius);
 			cornerLocation = new Dictionary<Corner, Location>
 			{
 				{ Corner.LeftUp , new Location(x, y) },
-				{ Corner.LeftDown , new Location(x, y + CellLength) },
-				{ Corner.RightUp , new Location(x + CellLength, y) },
-				{ Corner.RightDown , new Location(x + CellLength, y + CellLength) },
+				{ Corner.LeftDown , new Location(x, y + CellRadius) },
+				{ Corner.RightUp , new Location(x + CellRadius, y) },
+				{ Corner.RightDown , new Location(x + CellRadius, y + CellRadius) },
 			};
 		}
 

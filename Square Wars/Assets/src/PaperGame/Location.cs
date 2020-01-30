@@ -8,8 +8,8 @@ namespace PaperGame
 {
 	public class Location
 	{
-		public double X { get; }
-		public double Y { get; }
+		public float X { get; }
+		public float Y { get; }
 
 		public Location()
 		{
@@ -17,7 +17,7 @@ namespace PaperGame
 			Y = 0;
 		}
 
-		public Location(double X, double Y)
+		public Location(float X, float Y)
 		{
 			this.X = X;
 			this.Y = Y;
@@ -36,6 +36,11 @@ namespace PaperGame
 		public static bool operator !=(Location thisLoc, Location otherLoc)
 		{
 			return !((thisLoc.X == otherLoc.X) && (thisLoc.Y == otherLoc.Y));
+		}
+
+		public static Location operator +(Location thisLoc, Location otherLoc)
+		{
+			return new Location(thisLoc.X + otherLoc.X, thisLoc.Y + otherLoc.Y);
 		}
 
 	}
