@@ -75,6 +75,7 @@
     <Compile Include="Assets\src\PaperGame\Program.cs" />
     <Compile Include="Assets\src\PaperGame\Properties\AssemblyInfo.cs" />
     <None Include="Assets\src\PaperGame\obj\Debug\PaperGame.csproj.FileListAbsolute.txt" />
+    <None Include="Assets\src\test\test.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/engin/Documents/GitHub/PaperGame/Square Wars/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
