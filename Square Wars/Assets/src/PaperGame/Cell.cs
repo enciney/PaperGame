@@ -7,7 +7,7 @@ using Resources = UnityEngine.Resources;
 
 namespace PaperGame
 {
-	public class Cell : UnityEngine.Object
+	public class Cell : MonoBehaviour
 	{
 		public enum Corner
 		{
@@ -17,34 +17,32 @@ namespace PaperGame
 			RightDown = 3,
 		}
 
-		public static  int CellRadius = 1;
-
-		public GameObject cell;
-		// Start is called before the first frame update
-		
-
+		public static  int Radius = 5;
+		private GameObject cellObject;
+		public GameObject CellObject { get { return cellObject; } }
 		private Dictionary<Corner, Location> cornerLocation;
 		public Dictionary<Corner, Location> CornerLocation { get { return cornerLocation; } }
 		public IBuilding CurrentBuilding { get; private set; }
 
-		public Cell() : this(0f, 0f) { }
+		public void Init(Location loc, GameObject obj) => Init(loc.X, loc.Y, obj);
 
-		public Cell(Location loc) : this(loc.X, loc.Y) {
-
-		}
-
-		public Cell( float x , float y)
+		public void Init(float x, float y, GameObject obj)
 		{
-			
-			//cell.transform.position = new Vector3(x, y);
-			//cell.transform.localScale = new Vector3(2 * CellRadius, 2 * CellRadius);
+			cellObject = obj;
+			cellObject.transform.position = new Vector3(x, y);
+			cellObject.transform.localScale = new Vector3(2 * Radius, 2 * Radius);
 			cornerLocation = new Dictionary<Corner, Location>
 			{
 				{ Corner.LeftUp , new Location(x, y) },
-				{ Corner.LeftDown , new Location(x, y + CellRadius) },
-				{ Corner.RightUp , new Location(x + CellRadius, y) },
-				{ Corner.RightDown , new Location(x + CellRadius, y + CellRadius) },
+				{ Corner.LeftDown , new Location(x, y + Radius) },
+				{ Corner.RightUp , new Location(x + Radius, y) },
+				{ Corner.RightDown , new Location(x + Radius, y + Radius) },
 			};
+		}
+
+		void Start()
+		{
+			
 		}
 
 		public override string ToString()
@@ -83,7 +81,6 @@ namespace PaperGame
 						{
 							return true;
 						}
-
 						else
 						{
 							// This mean duplicate cells exist
@@ -91,7 +88,6 @@ namespace PaperGame
 					}
 				}
 			}
-
 			return false;
 		}
 	}

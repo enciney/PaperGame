@@ -169,11 +169,11 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
+  near clip plane: 0
+  far clip plane: 50
+  field of view: 150
   orthographic: 1
-  orthographic size: 24
+  orthographic size: 150
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -212,7 +212,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 657386883}
-  - component: {fileID: 657386882}
   - component: {fileID: 657386884}
   m_Layer: 0
   m_Name: Cell Controller
@@ -221,19 +220,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &657386882
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 657386881}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f565302e4a79cd3489163f7d05be8f59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cell: {fileID: 1120385006887762526, guid: f4580cd76c964ef499ed99bae62c15b6, type: 3}
 --- !u!4 &657386883
 Transform:
   m_ObjectHideFlags: 0
@@ -260,6 +246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e4fa6fbf25c55447889d3e16c0e28a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Size: 15
 --- !u!1 &1445987187
 GameObject:
   m_ObjectHideFlags: 0
