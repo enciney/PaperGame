@@ -28,7 +28,7 @@ namespace PaperGame
 			userCells = new Cell[userCellLenght][];
 			for (int i = 0; i < userCellLenght; i++)
 			{
-				cells[i] = new Cell[userCellLenght];
+				userCells[i] = new Cell[userCellLenght];
 			}
 
 			boardWidth = width;
