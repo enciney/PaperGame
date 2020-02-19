@@ -9,28 +9,27 @@ namespace PaperGame
 {
 	public class Cell : MonoBehaviour
 	{
-		public enum Corner
-		{
-			LeftUp = 0,
-			LeftDown = 1,
-			RightUp = 2,
-			RightDown = 3,
-		}
+		
 
 		public static  int Radius = 5;
 		private GameObject cellObject;
 		public GameObject CellObject { get { return cellObject; } }
 		private Dictionary<Corner, Location> cornerLocation;
 		public Dictionary<Corner, Location> CornerLocation { get { return cornerLocation; } }
+		private Color cellColor;
+		public Color CellColor { get { return cellColor; } }
 		public IBuilding CurrentBuilding { get; private set; }
 
-		public void Init(Location loc, GameObject obj) => Init(loc.X, loc.Y, obj);
+		public void Init(Location loc, GameObject obj, Color color) => Init(loc.X, loc.Y, obj, color);
 
-		public void Init(float x, float y, GameObject obj)
+		public void Init(float x, float y, GameObject obj, Color color)
 		{
 			cellObject = obj;
 			cellObject.transform.position = new Vector3(x, y);
 			cellObject.transform.localScale = new Vector3(2 * Radius, 2 * Radius);
+			cellColor = color;
+			var renderer = cellObject.GetComponent<SpriteRenderer>();
+			renderer.material.SetColor("_Color", color);
 			cornerLocation = new Dictionary<Corner, Location>
 			{
 				{ Corner.LeftUp , new Location(x, y) },
@@ -68,7 +67,18 @@ namespace PaperGame
 			}
 			// can not add a structure if alerady structure exist on cell
 		}
+		/// <summary>
+		/// Cell click aim;
+		/// 1- adding building 
+		/// 2- for search the cells 
+		/// 3- choose the cells for some kind of information
+		/// </summary>
+		private void OnMouseDown()
+		{
+		}
 
+
+	
 		public bool IsAdjacent(Cell otherCell)
 		{
 			foreach(var t in this.CornerLocation)

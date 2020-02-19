@@ -66,6 +66,8 @@
     <Compile Include="Assets\Scripts\Region.cs" />
     <Compile Include="Assets\src\PaperGame\Building.cs" />
     <Compile Include="Assets\src\PaperGame\Cell.cs" />
+    <Compile Include="Assets\src\PaperGame\Corner.cs" />
+    <Compile Include="Assets\src\PaperGame\GameBoard.cs" />
     <Compile Include="Assets\src\PaperGame\House.cs" />
     <Compile Include="Assets\src\PaperGame\IBuilding.cs" />
     <Compile Include="Assets\src\PaperGame\Location.cs" />
