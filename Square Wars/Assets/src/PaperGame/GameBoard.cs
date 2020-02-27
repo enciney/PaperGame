@@ -10,34 +10,33 @@ namespace PaperGame
 {
 	public class GameBoard : MonoBehaviour
 	{
+		#region members
 		public Color defaultCellColor = Color.gray;
-		public const int userCellLenght = 3;
+		public const int initialUserCellLenght = 3;
+		public Cell[][] Cells { get { return cells; } }
+		public static readonly Location InitialLocation = new Location(0, 0);
+		#endregion
+
+		#region fields
+		private List<Player> players;
 		private int boardWidth;
 		private int boardHeight;
 		private Cell[][] cells = null;
-		public Cell[][] Cells { get { return cells; } }
-		public Cell[][] UserCells { get { return userCells; } }
-		private Cell[][] userCells;
+		#endregion
 
-		public static readonly Location InitialLocation = new Location(0, 0);
-
-		public void CreateBoard(int size, Corner userCorner) => CreateBoard(size, size, userCorner);
+		public void CreateBoard(int size, Corner userCorner, Color32[] playerColors) => CreateBoard(size, size, userCorner, playerColors);
 		
-		public void CreateBoard(int width, int height, Corner userCorner)
+		public void CreateBoard(int width, int height, Corner userCorner, Color32[] playerColors)
 		{
-			userCells = new Cell[userCellLenght][];
-			for (int i = 0; i < userCellLenght; i++)
-			{
-				userCells[i] = new Cell[userCellLenght];
-			}
-
-			boardWidth = width;
-			boardHeight = height;
-			var userBorder = GiveUserBorder(userCorner);
 			// @Engin : for two dimensional Cell definition also we can use Cell[,] , but with this definition we do not use Linq methods.
 			// singleton
 			if (cells == null)
 			{
+				List<Cell> userCellsAsList = new List<Cell>();
+				boardWidth = width;
+				boardHeight = height;
+				var userBorder = GiveUserBorder(userCorner);
+
 				cells = new Cell[width][];
 				for (int i = 0; i < width; i++)
 				{
@@ -57,24 +56,28 @@ namespace PaperGame
 						{
 							isUserCell = true;
 							// https://www.rapidtables.com/web/color/green-color.html
-							cellColor = new Color(50, 205, 0); //limegreen
+							cellColor = playerColors[0];
 						}
 						var newCell = new Cell();
 						newCell.Init(newCellLoc, newObject, cellColor);
 						if (isUserCell)
 						{
-							//@TODO need userCell initialization
+							userCellsAsList.Add(newCell);
 						}
-
 						cells[i][j] = newCell;
 					}
 				}
 			}
 		}
-
-		public Tuple<Location,Location> GiveUserBorder(Corner corner)
+		
+		/// <summary>
+		/// calulate the border of the user according to specified corner info
+		/// </summary>
+		/// <param name="corner">Corner enumartion object</param>
+		/// <returns>2 location one of (minX,minY) other (maxX,maxY)</returns>
+		private Tuple<Location,Location> GiveUserBorder(Corner corner)
 		{
-			var startLenghtIndex = userCellLenght - 1;
+			var startLenghtIndex = initialUserCellLenght - 1;
 			var height = boardHeight - 1;
 			var width = boardWidth - 1;
 			switch (corner)
@@ -90,7 +93,6 @@ namespace PaperGame
 				default:
 					break;
 			}
-
 			return null;
 		}
 	}

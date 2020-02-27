@@ -248,7 +248,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Size: 15
   cellPrefab: {fileID: 0}
-  userStartCorner: rightDown
+  userStartCorner: rightUp
+  playerColors:
+  - {r: 1, g: 1, b: 0, a: 0}
+  - {r: 0.8784314, g: 0.8745098, b: 0.26666668, a: 0.76862746}
 --- !u!1 &1445987187
 GameObject:
   m_ObjectHideFlags: 0

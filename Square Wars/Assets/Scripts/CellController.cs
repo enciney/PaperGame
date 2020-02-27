@@ -12,6 +12,7 @@ public class CellController : MonoBehaviour
 	public int Size;
 	public GameObject cellPrefab;
 	public string userStartCorner;
+	public Color32[] playerColors;
 	private Corner userCorner;
 	private Cell[][] cells = null;
 	public Cell[][] Cells{ get{return cells;}}
@@ -23,7 +24,7 @@ public class CellController : MonoBehaviour
 			// invalid string for corner
 		}
 		var gameBoard = new GameBoard();
-		gameBoard.CreateBoard(Size, userCorner);
+		gameBoard.CreateBoard(Size, userCorner, playerColors);
 		
 	}
     private void OnMouseDown() 

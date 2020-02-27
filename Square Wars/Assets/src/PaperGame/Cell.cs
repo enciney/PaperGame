@@ -9,33 +9,37 @@ namespace PaperGame
 {
 	public class Cell : MonoBehaviour
 	{
-		
 
-		public static  int Radius = 5;
+
+		public static int Radius = 5;
 		private GameObject cellObject;
 		public GameObject CellObject { get { return cellObject; } }
 		private Dictionary<Corner, Location> cornerLocation;
 		public Dictionary<Corner, Location> CornerLocation { get { return cornerLocation; } }
-		private Color cellColor;
-		public Color CellColor { get { return cellColor; } }
+		public Location ExactLocation {get { return exactLocation;} }
+		private Location exactLocation;
+		private Color32 cellColor;
+		public Color32 CellColor { get { return cellColor; } }
 		public IBuilding CurrentBuilding { get; private set; }
 
-		public void Init(Location loc, GameObject obj, Color color) => Init(loc.X, loc.Y, obj, color);
+		public void Init(Location loc, GameObject obj, Color32 color) => Init(loc.X, loc.Y, obj, color);
 
-		public void Init(float x, float y, GameObject obj, Color color)
+		public void Init(float x, float y, GameObject obj, Color32 color)
 		{
+			exactLocation = new Location(x,y);
 			cellObject = obj;
 			cellObject.transform.position = new Vector3(x, y);
 			cellObject.transform.localScale = new Vector3(2 * Radius, 2 * Radius);
 			cellColor = color;
 			var renderer = cellObject.GetComponent<SpriteRenderer>();
-			renderer.material.SetColor("_Color", color);
+			renderer.material.color = cellColor;
+			renderer.material.SetColor("_Color", cellColor); 
 			cornerLocation = new Dictionary<Corner, Location>
 			{
-				{ Corner.LeftUp , new Location(x, y) },
-				{ Corner.LeftDown , new Location(x, y + Radius) },
-				{ Corner.RightUp , new Location(x + Radius, y) },
-				{ Corner.RightDown , new Location(x + Radius, y + Radius) },
+				{ Corner.LeftUp , new Location(x - Radius, y + Radius) },
+				{ Corner.LeftDown , new Location(x - Radius, y - Radius) },
+				{ Corner.RightUp , new Location(x + Radius, y + Radius) },
+				{ Corner.RightDown , new Location(x + Radius, y - Radius) },
 			};
 		}
 
@@ -55,18 +59,6 @@ namespace PaperGame
 			return locationStr + buildingStr;
 		}
 
-		/// <summary>
-		/// addBuilding to cell
-		/// </summary>
-		/// <param name="build"></param>
-		public void AddBuilding(IBuilding build)
-		{
-			if(CurrentBuilding == null)
-			{
-				CurrentBuilding = build;
-			}
-			// can not add a structure if alerady structure exist on cell
-		}
 		/// <summary>
 		/// Cell click aim;
 		/// 1- adding building 
