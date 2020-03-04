@@ -10,7 +10,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <ProjectGuid>{0F12FC25-F18D-ED52-3BBA-98089E83D8F3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -75,7 +76,6 @@
     <Compile Include="Assets\src\PaperGame\Program.cs" />
     <Compile Include="Assets\src\PaperGame\Properties\AssemblyInfo.cs" />
     <None Include="Assets\src\PaperGame\obj\Debug\PaperGame.csproj.FileListAbsolute.txt" />
-    <None Include="Assets\src\test\test.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>../Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

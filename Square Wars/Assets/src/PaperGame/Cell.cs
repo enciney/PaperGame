@@ -9,8 +9,6 @@ namespace PaperGame
 {
 	public class Cell : MonoBehaviour
 	{
-
-
 		public static int Radius = 5;
 		private GameObject cellObject;
 		public GameObject CellObject { get { return cellObject; } }
