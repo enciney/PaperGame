@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\Region.cs" />
     <Compile Include="Assets\src\PaperGame\Building.cs" />
     <Compile Include="Assets\src\PaperGame\Cell.cs" />
+    <Compile Include="Assets\src\PaperGame\ColorBox.cs" />
     <Compile Include="Assets\src\PaperGame\Corner.cs" />
     <Compile Include="Assets\src\PaperGame\GameBoard.cs" />
     <Compile Include="Assets\src\PaperGame\House.cs" />
@@ -75,6 +76,9 @@
     <Compile Include="Assets\src\PaperGame\Player.cs" />
     <Compile Include="Assets\src\PaperGame\Program.cs" />
     <Compile Include="Assets\src\PaperGame\Properties\AssemblyInfo.cs" />
+    <Compile Include="Assets\src\PaperGame\Scene.cs" />
+    <Compile Include="Assets\src\PaperGame\StartingSettings.cs" />
+    <Compile Include="Assets\src\PaperGame\UIController.cs" />
     <None Include="Assets\src\PaperGame\obj\Debug\PaperGame.csproj.FileListAbsolute.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>../Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
