@@ -71,46 +71,43 @@
     <Compile Include="Assets\src\PaperGame\House.cs" />
     <Compile Include="Assets\src\PaperGame\IBuilding.cs" />
     <Compile Include="Assets\src\PaperGame\Location.cs" />
-    <Compile Include="Assets\src\PaperGame\obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
-    <Compile Include="Assets\src\PaperGame\obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
-    <Compile Include="Assets\src\PaperGame\obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Assets\src\PaperGame\Player.cs" />
     <Compile Include="Assets\src\PaperGame\Program.cs" />
     <Compile Include="Assets\src\PaperGame\Properties\AssemblyInfo.cs" />
     <None Include="Assets\src\PaperGame\obj\Debug\PaperGame.csproj.FileListAbsolute.txt" />
     <None Include="Assets\src\test\test.txt" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/engin/Documents/GitHub/PaperGame/Square Wars/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>../Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/engin/Documents/GitHub/PaperGame/Square Wars/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>../Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/engin/Documents/GitHub/PaperGame/Square Wars/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>../Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/engin/Documents/GitHub/PaperGame/Square Wars/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>../Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/engin/Documents/GitHub/PaperGame/Square Wars/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>../Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/engin/Documents/GitHub/PaperGame/Square Wars/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>../Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/engin/Documents/GitHub/PaperGame/Square Wars/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>../Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>C:/Users/engin/Documents/GitHub/PaperGame/Square Wars/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+      <HintPath>../Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
-      <HintPath>C:/Users/engin/Documents/GitHub/PaperGame/Square Wars/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+      <HintPath>../Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/engin/Documents/GitHub/PaperGame/Square Wars/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>../Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/engin/Documents/GitHub/PaperGame/Square Wars/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>../Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.18f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

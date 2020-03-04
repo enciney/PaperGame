@@ -11,7 +11,7 @@ namespace PaperGame
 	public class GameBoard : MonoBehaviour
 	{
 		#region members
-		public Color defaultCellColor = Color.gray;
+		public Color32 defaultCellColor = Color.gray;
 		public const int initialUserCellLenght = 3;
 		public Cell[][] Cells { get { return cells; } }
 		public static readonly Location InitialLocation = new Location(0, 0);

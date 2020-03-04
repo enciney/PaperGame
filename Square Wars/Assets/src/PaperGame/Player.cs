@@ -12,15 +12,15 @@ namespace PaperGame
 		
 		public List<List<Cell>> UserCells { get { return userCells; } }
 		public bool IsUser { get { return isUser; } }
-		public Color Color { get { return color; } }
+		public Color32 Color { get { return color; } }
 		public List<IBuilding> Buildings { get { return buildings; } }
 
 		private List<List<Cell>> userCells;
 		private bool isUser;
-		private Color color;
+		private Color32 color;
 		private List<IBuilding> buildings;
 
-		public void Init(List<Cell> list, Color color, bool isUser = false )
+		public void Init(List<Cell> list, Color32 color, bool isUser = false )
 		{
 			UserCellInitialization(list);
 			this.isUser = isUser;
